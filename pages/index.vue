@@ -1,33 +1,24 @@
 <template>
   <section class="container">
-    <div>
-      <app-logo/>
+    <div class="main">
+      <!-- <app-logo/> -->
       <h1 class="title">
         specs
       </h1>
-      <h2 class="subtitle">
-        Nuxt.js project
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green">Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey">GitHub</a>
+      <div class="content">
+        Première partie.
       </div>
+      <Tree/>
     </div>
   </section>
 </template>
 
 <script>
-import AppLogo from '~/components/AppLogo.vue'
+import Tree from '~/components/Tree.vue'
 
 export default {
   components: {
-    AppLogo
+    Tree
   }
 }
 </script>
@@ -57,8 +48,9 @@ export default {
   word-spacing: 5px;
   padding-bottom: 15px;
 }
-
-.links {
-  padding-top: 15px;
+.main {
+  width: 100%;
+  height: 100%;
+  background-color: green;
 }
 </style>

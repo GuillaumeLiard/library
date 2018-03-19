@@ -12,49 +12,49 @@ const createStore = () => {
               {
                 id: 1,
                 group: 'english',
-                value: 'apple'
+                name: 'apple'
               },
               {
                 id: 2,
                 group: 'english',
-                value: 'pear'
+                name: 'pear'
               },
               {
                 id: 3,
                 group: 'english',
-                value: 'peach'
+                name: 'peach'
               },
               {
                 id: 4,
                 group: 'french',
-                value: 'pomme'
+                name: 'pomme'
               },
               {
                 id: 5,
                 group: 'french',
-                value: 'poire'
+                name: 'poire'
               },
               {
                 id: 6,
                 group: 'french',
-                value: 'pêche'
+                name: 'pêche'
               }
             ],
             links: [
               {
                 id: 1,
-                source: 1,
-                target: 4
+                sid: 1,
+                tid: 4
               },
               {
                 id: 2,
-                source: 2,
-                target: 5
+                sid: 2,
+                tid: 5
               },
               {
                 id: 3,
-                source: 3,
-                target: 6
+                sid: 3,
+                tid: 6
               }
             ]
           }
