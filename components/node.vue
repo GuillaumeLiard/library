@@ -1,3 +1,28 @@
 <template>
-  <circle cx="120" cy="120" r="100"></circle>
+  <circle
+    :cx="cx"
+    :cy="cy"
+    r="100"
+  ></circle>
 </template>
+
+<script type="text/javascript">
+  export default {
+    data: function () {
+      return {
+        cx: 1000,
+        cy: 500
+      }
+    }
+  }
+</script>
+
+<style media="screen">
+  circle {
+
+    /*cx: 33.33vw;*/
+    /*cy: calc(33.33vh - 50px);*/
+    fill: white;
+    stroke: blue;
+  }
+</style>
