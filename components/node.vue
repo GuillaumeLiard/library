@@ -23,6 +23,6 @@
     /*cx: 33.33vw;*/
     /*cy: calc(33.33vh - 50px);*/
     fill: white;
-    stroke: hsl(240, 100%, 100%);;
+    stroke: hsl(240, 20%, 30%);;
   }
 </style>
