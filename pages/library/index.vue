@@ -41,6 +41,8 @@
   svg {
     width: 100%;
     height: calc(100vh - 50px);
-    background-color: rgba(0, 0, 0, 0.3);
+    /*background-color: rgba(0, 0, 0, 0.3);*/
+    /*background-color: hsl(240, 50%, 50%);*/
+    background-color: hsl(240, 30%, 50%);
   }
   </style>
