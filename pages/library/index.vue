@@ -4,16 +4,16 @@
       Bibliothèque
     </h1>
     <svg>
-      <node/>
+      <isomorphism/>
     </svg>
     </section>
   </template>
 
   <script>
-  import node from '~/components/node';
+  import isomorphism from '~/components/Isomorphism';
   export default {
     components: {
-      node
+      isomorphism
     },
   }
   </script>

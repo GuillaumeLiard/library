@@ -1,15 +1,25 @@
 <template>
-  <div class="content">
-    <d3-network :net-nodes="nodes" :net-links="links" :options="options" />
-  </div>
+  <g class="">
+    <g v-for="node in nodes" :key="node.id">
+      <node/>
+    </g>
+  </g>
+
 </template>
 
 <script>
+import node from '~/components/node';
+import pair from '~/components/pair';
 
-
+// <li v-for="node in nodes">
+// {{ node.name }}
+// <!-- <node :options="node" :net-links="links" :options="options" /> -->
+// </li>
 export default {
+
   components: {
-    D3Network
+    node,
+    pair
   },
   computed : {
     nodes () {
@@ -23,14 +33,16 @@ export default {
     }
   }
 }
+
+
 </script>
 
-<style src="vue-d3-network/dist/vue-d3-network.css">
+<style>
 
-  .content {
+.content {
 
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 
-  }
+}
 </style>

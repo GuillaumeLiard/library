@@ -10,8 +10,8 @@
   export default {
     data: function () {
       return {
-        cx: 1000,
-        cy: 500
+        cx: 0,
+        cy: 0
       }
     }
   }
