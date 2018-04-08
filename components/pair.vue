@@ -1,7 +1,7 @@
 <template>
-  <g>
-    <node/>
-
+  <g class="pair">
+    <node class="left"/>
+    <node class="right"/>
   </g>
 </template>
 
@@ -26,4 +26,10 @@
 </script>
 
 <style media="screen">
+  .left{
+    transform: translateX(33.33%);
+  }
+  .right{
+    left: 66.66%;
+  }
 </style>

@@ -1,8 +1,6 @@
 <template>
-  <g class="">
-    <g v-for="node in nodes" :key="node.id">
-      <node/>
-    </g>
+  <g class="pairs">
+    <pair v-for="pair in pairs" :key="pair.id"/>
   </g>
 
 </template>
@@ -30,6 +28,30 @@ export default {
     },
     options () {
       return {}
+    },
+    pairs() {
+      return [
+        {
+          id: 1,
+          nodes: [
+            {
+              id: 1,
+              group: 'english',
+              name: 'apple'
+            },
+            {
+              id: 4,
+              group: 'french',
+              name: 'pomme'
+            }
+          ],
+          link: {
+            id: 1,
+            sid: 1,
+            tid: 4
+          }
+        }
+      ]
     }
   }
 }

@@ -1,9 +1,14 @@
 <template>
-  <circle
-    :cx="cx"
-    :cy="cy"
-    r="100"
-  ></circle>
+  <g class="node">
+    <circle
+      :cx="cx"
+      :cy="cy"
+      r="100"
+    ></circle>
+    <text x="0" y="0" font-family="Verdana" font-size="35">
+      {name}
+    </text>
+  </g>
 </template>
 
 <script type="text/javascript">
