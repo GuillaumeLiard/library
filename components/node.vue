@@ -3,20 +3,22 @@
     <circle
       :cx="cx"
       :cy="cy"
-      r="100"
+      :r="r"
     ></circle>
     <text x="0" y="0" font-family="Verdana" font-size="35">
-      {name}
+      {Hello, out there}
     </text>
   </g>
 </template>
 
 <script type="text/javascript">
   export default {
+    props: ['cx', 'cy'],
     data: function () {
       return {
-        cx: 0,
-        cy: 0
+        // cx: 0,
+        // cy: 0,
+        r: 100
       }
     }
   }

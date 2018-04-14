@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import node from '~/components/node';
+// import node from '~/components/node';
 import pair from '~/components/pair';
 
 // <li v-for="node in nodes">
@@ -16,7 +16,7 @@ import pair from '~/components/pair';
 export default {
 
   components: {
-    node,
+    // node,
     pair
   },
   computed : {
