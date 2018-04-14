@@ -9,56 +9,59 @@
 import pair from '~/components/pair';
 
 export default {
-
+  props: ['pairs'],
+  mounted() {
+    console.log(this.pairs);
+  },
   components: {
     pair
   },
-  computed : {
-    pairs() {
-      return [
-        {
-          id: 1,
-          nodes: [
-            {
-              id: 1,
-              group: 'english',
-              name: 'apple'
-            },
-            {
-              id: 4,
-              group: 'french',
-              name: 'pomme'
-            }
-          ],
-          link: {
-            id: 1,
-            sid: 1,
-            tid: 4
-          }
-        },
-        {
-          id: 2,
-          nodes: [
-            {
-              id: 1,
-              group: 'english',
-              name: 'apple'
-            },
-            {
-              id: 4,
-              group: 'french',
-              name: 'pomme'
-            }
-          ],
-          link: {
-            id: 1,
-            sid: 1,
-            tid: 4
-          }
-        }
-      ]
-    }
-  }
+  // computed : {
+  //   pairs() {
+  //     return [
+  //       {
+  //         id: 1,
+  //         nodes: [
+  //           {
+  //             id: 1,
+  //             group: 'english',
+  //             name: 'apple'
+  //           },
+  //           {
+  //             id: 4,
+  //             group: 'french',
+  //             name: 'pomme'
+  //           }
+  //         ],
+  //         link: {
+  //           id: 1,
+  //           sid: 1,
+  //           tid: 4
+  //         }
+  //       },
+  //       {
+  //         id: 2,
+  //         nodes: [
+  //           {
+  //             id: 1,
+  //             group: 'english',
+  //             name: 'apple'
+  //           },
+  //           {
+  //             id: 4,
+  //             group: 'french',
+  //             name: 'pomme'
+  //           }
+  //         ],
+  //         link: {
+  //           id: 1,
+  //           sid: 1,
+  //           tid: 4
+  //         }
+  //       }
+  //     ]
+  //   }
+  // }
 }
 
 

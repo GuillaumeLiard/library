@@ -1,10 +1,21 @@
 <template>
   <g class="pair">
-
-    <!-- <node v-for="node in pair.nodes" :key="node.id"/> -->
-    <node v-for="node in pair.nodes" :key="node.id"/>
-    <node :cx="left.cx" :cy="left.cy" :r="left.r" class="left"/>
-    <node :cx="right.cx" :cy="right.cy" :r="right.r" class="right"/>
+    <node
+      v-for="(node, index) in pair.nodes"
+      v-if="index%2"
+      :cx="left.cx"
+      :cy="left.cy"
+      :r="left.r"
+      :key="node.id"
+    />
+    <node
+      v-for="(node, index) in pair.nodes"
+      v-if="!index%2"
+      :cx="right.cx"
+      :cy="right.cy"
+      :r="right.r"
+      :key="node.id"
+    />
   </g>
 </template>
 
@@ -26,10 +37,13 @@
       // console.log(this);
       // console.log(this.window());
       // alert('mounted');
-      this.$forceUpdate();
+      // this.$forceUpdate();
 
     },
     computed: {
+      // odd: function(index) {
+      //   return index%2
+      // },
       nodes: function() {
         return this.pair.nodes
       },

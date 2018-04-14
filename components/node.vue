@@ -26,7 +26,7 @@
     },
     computed: {
       text__position: function() {
-        console.log(this);
+        // console.log(this);
         return {
           x: this.cx,
           // x: 50,
