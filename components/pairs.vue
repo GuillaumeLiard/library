@@ -1,5 +1,5 @@
 <template>
-  <svg class="pairs" :viewbox="vb">
+  <svg class="pairs" :viewBox="vb">
     <pair v-for="(pair, index) in pairs" :layout="layout" :index="index" :pair="pair" :key="pair.id"/>
   </svg>
 </template>
@@ -11,11 +11,6 @@ const PHI = 1.618;
 const R = (WIDTH / PHI ) / 4;
 const GUTTER = (WIDTH - 4 * R) / 3;
 
-const LAYOUT = {
-  gutter: GUTTER,
-  r: R
-}
-
 import pair from '~/components/pair';
 
 export default {
@@ -23,13 +18,15 @@ export default {
   components: {
     pair
   },
-  // data: {
-  //   layout: LAYOUT
-  // },
+  data() {
+    return {
+      layout: {
+        gutter: GUTTER,
+        r: R
+      }
+    }
+  },
   computed: {
-    layout() {
-      return LAYOUT
-    },
     nb() {
       return this.pairs.length
     },
