@@ -5,9 +5,11 @@
       :cy="cy"
       :r="r"
     ></circle>
-    <text x="0" y="0" font-family="Verdana" font-size="35">
-      {Hello, out there}
-    </text>
+    <g class="text">
+      <text class="text__content" :x="cx" :y="cy" font-family="Verdana" font-size="35">
+        {{ text }}
+      </text>
+    </g>
   </g>
 </template>
 
@@ -18,7 +20,8 @@
       return {
         // cx: 0,
         // cy: 0,
-        r: 100
+        r: 100,
+        text: 'ABC'
       }
     }
   }
@@ -31,5 +34,14 @@
     /*cy: calc(33.33vh - 50px);*/
     fill: white;
     stroke: hsl(240, 20%, 30%);;
+  }
+
+  .text {
+
+    will-change: transform;
+    transform: translate(-50%, 50%);
+  }
+  .text__content {
+
   }
 </style>

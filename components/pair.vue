@@ -13,6 +13,8 @@
     },
     mounted() {
       // console.log(this);
+      // console.log(this.window());
+      this.$forceUpdate();
 
     },
     computed: {
@@ -23,25 +25,29 @@
       //   }
       // }
       left: function() {
-        console.log('this3');
-        this.abc();
+        // console.log('this3');
+        // this.abc();
         // console.log(window());
         // console.log(this.window());
         return {
-          // cx: this.window.width / 3,
-          cy: 200
+          cx: 100,
+          // cx: this.window().width / 3,
+          cy: 150
         }
       },
       right: function() {
         return {
-          cx: 500,
-          cy: 200
+          cx: 200,
+          // cx: 2 * this.window().width / 3,
+          cy: 150
         }
       }
     },
     methods: {
       window: function(){
-        if (process.BROWSER_BUILD) {
+        // console.log(process);
+        // if (process.BROWSER_BUILD) {
+        if (process.browser) {
           return {
             width: window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
             height: window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
@@ -63,6 +69,8 @@
 <style media="screen">
   .pair{
     /*transform: translateX(33.33%);*/
+    width: 100%;
+    height: 100%;
 
   }
   .left{

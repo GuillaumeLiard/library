@@ -1,28 +1,19 @@
 <template>
-  <g class="library">
-    <pairs/>
+  <g class="pairs">
+    <pair v-for="pair in pairs" :key="pair.id"/>
   </g>
 </template>
 
 <script>
-
-import pairs from '~/components/pairs';
+// import node from '~/components/node';
+import pair from '~/components/pair';
 
 export default {
 
   components: {
-    pairs
+    pair
   },
   computed : {
-    nodes () {
-      return this.$store.state.topologies[0].example.nodes
-    },
-    links () {
-      return this.$store.state.topologies[0].example.links
-    },
-    options () {
-      return {}
-    },
     pairs() {
       return [
         {
@@ -57,6 +48,6 @@ export default {
 
 .pairs {
 
-  /*transform: scale(3);*/
+  transform: scale(3);
 }
 </style>
