@@ -6,6 +6,7 @@
       :cx="left.cx"
       :cy="left.cy"
       :r="left.r"
+      :name="node.name"
       :key="node.id"
     />
     <node
@@ -14,6 +15,7 @@
       :cx="right.cx"
       :cy="right.cy"
       :r="right.r"
+      :name="node.name"
       :key="node.id"
     />
   </g>
@@ -38,6 +40,7 @@
       // console.log(this.window());
       // alert('mounted');
       // this.$forceUpdate();
+      console.log(this.nodes);
 
     },
     computed: {

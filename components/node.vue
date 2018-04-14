@@ -7,7 +7,7 @@
     ></circle>
     <g class="text">
       <text class="text__content" :x="text__position.x" :y="text__position.y">
-        {{ text }}
+        {{ name }}
       </text>
     </g>
   </g>
@@ -15,13 +15,13 @@
 
 <script type="text/javascript">
   export default {
-    props: ['cx', 'cy', 'r'],
+    props: ['cx', 'cy', 'r', 'name'],
     data: function () {
       return {
         // cx: 0,
         // cy: 0,
         // r: 100,
-        text: 'ABC'
+        // text: 'ABC'
       }
     },
     computed: {
