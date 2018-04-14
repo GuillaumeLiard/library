@@ -1,67 +1,72 @@
 <template>
   <g class="pair">
-    <node :cx="left.cx" :cy="left.cy" class="left"/>
-    <node :cx="right.cx" :cy="right.cy" class="right"/>
+
+    <!-- <node v-for="node in pair.nodes" :key="node.id"/> -->
+    <node v-for="node in pair.nodes" :key="node.id"/>
+    <node :cx="left.cx" :cy="left.cy" :r="left.r" class="left"/>
+    <node :cx="right.cx" :cy="right.cy" :r="right.r" class="right"/>
   </g>
 </template>
 
 <script type="text/javascript">
+// <node :cx="left.cx" :cy="left.cy" :r="left.r" class="left"/>
+// <node :cx="right.cx" :cy="right.cy" :r="right.r" class="right"/>
+  const WIDTH = 300;
+  const PHI = 1.618;
+  const R = (WIDTH / PHI ) / 4;
+  const GUTTER = (WIDTH - 4 * R) / 3;
+
   import node from "~/components/node"
   export default {
+    props: ['pair', 'index'],
     components: {
       node
     },
     mounted() {
       // console.log(this);
       // console.log(this.window());
+      // alert('mounted');
       this.$forceUpdate();
 
     },
     computed: {
-      // window: function() {
-      //   return {
-      //     width: window.innerWidth,
-      //     height: window.innerHeight
-      //   }
-      // }
+      nodes: function() {
+        return this.pair.nodes
+      },
       left: function() {
-        // console.log('this3');
-        // this.abc();
-        // console.log(window());
-        // console.log(this.window());
         return {
-          cx: 100,
+          cx: GUTTER + R,
           // cx: this.window().width / 3,
-          cy: 150
+          cy: GUTTER + R + this.index * (GUTTER + 2 * R),
+          r: R
         }
       },
       right: function() {
         return {
-          cx: 200,
+          cx: 2 * GUTTER + 3 * R,
           // cx: 2 * this.window().width / 3,
-          cy: 150
+          cy: GUTTER + R + this.index * (GUTTER + 2 * R),
+          r: R
         }
       }
     },
     methods: {
-      window: function(){
-        // console.log(process);
-        // if (process.BROWSER_BUILD) {
-        if (process.browser) {
-          return {
-            width: window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
-            height: window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
-          }
-        } else {
-          return {
-            width: 100,
-            height: 100
-          }
-        }
-      },
-      abc: function() {
-        console.log(this.window());
-      }
+      // window: function(){
+      //   if (process.browser) {
+      //     return {
+      //       width: window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
+      //       height: window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
+      //     }
+      //   } else {
+      //     return {
+      //       width: 100,
+      //       height: 100
+      //     }
+      //   }
+      // },
+      // abc: function() {
+      //   console.log(this.window());
+      // }
     }
   }
 </script>
@@ -69,8 +74,8 @@
 <style media="screen">
   .pair{
     /*transform: translateX(33.33%);*/
-    width: 100%;
-    height: 100%;
+    /*width: 100%;
+    height: 100%;*/
 
   }
   .left{

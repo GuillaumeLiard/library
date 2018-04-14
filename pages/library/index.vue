@@ -3,9 +3,7 @@
     <h1>
       Bibliothèque
     </h1>
-    <svg viewbox="0 0 300 1000">
-      <isomorphism/>
-    </svg>
+    <isomorphism/>
     </section>
   </template>
 
@@ -38,11 +36,5 @@
     box-shadow: 0 5px 10px blue;
   }
 
-  svg {
-    width: 100%;
-    height: calc(100vh - 50px);
-    /*background-color: rgba(0, 0, 0, 0.3);*/
-    background-color: hsl(200, 50%, 30%);
-    /*background-color: hsl(240, 30%, 100%);*/
-  }
+  
   </style>

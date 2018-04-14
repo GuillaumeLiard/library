@@ -1,7 +1,7 @@
 <template>
-  <g class="pairs">
-    <pair v-for="pair in pairs" :key="pair.id"/>
-  </g>
+  <svg class="pairs" viewbox="0 0 300 1000">
+    <pair v-for="(pair, index) in pairs" :index="index" :pair="pair" :key="pair.id"/>
+  </svg>
 </template>
 
 <script>
@@ -35,6 +35,26 @@ export default {
             sid: 1,
             tid: 4
           }
+        },
+        {
+          id: 2,
+          nodes: [
+            {
+              id: 1,
+              group: 'english',
+              name: 'apple'
+            },
+            {
+              id: 4,
+              group: 'french',
+              name: 'pomme'
+            }
+          ],
+          link: {
+            id: 1,
+            sid: 1,
+            tid: 4
+          }
         }
       ]
     }
@@ -47,7 +67,9 @@ export default {
 <style>
 
 .pairs {
-
-  transform: scale(3);
+  width: 100%;
+  max-width: 1024px;
+  height: auto;
+  background-color: hsl(200, 50%, 30%);
 }
 </style>
