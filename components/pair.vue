@@ -22,14 +22,9 @@
 </template>
 
 <script type="text/javascript">
-  const WIDTH = 300;
-  const PHI = 1.618;
-  const R = (WIDTH / PHI ) / 4;
-  const GUTTER = (WIDTH - 4 * R) / 3;
-
   import node from "~/components/node"
   export default {
-    props: ['pair', 'index'],
+    props: ['pair', 'index', 'layout'],
     components: {
       node
     },
@@ -39,16 +34,16 @@
       },
       left: function() {
         return {
-          cx: GUTTER + R,
-          cy: GUTTER + R + this.index * (GUTTER + 2 * R),
-          r: R
+          cx: this.layout.gutter + this.layout.r,
+          cy: this.layout.gutter + this.layout.r + this.index * (this.layout.gutter + 2 * this.layout.r),
+          r: this.layout.r
         }
       },
       right: function() {
         return {
-          cx: 2 * GUTTER + 3 * R,
-          cy: GUTTER + R + this.index * (GUTTER + 2 * R),
-          r: R
+          cx: 2 * this.layout.gutter + 3 * this.layout.r,
+          cy: this.layout.gutter + this.layout.r + this.index * (this.layout.gutter + 2 * this.layout.r),
+          r: this.layout.r
         }
       }
     },
