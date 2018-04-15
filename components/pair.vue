@@ -9,6 +9,13 @@
       :name="node.name"
       :key="node.id"
     />
+    <relation
+      :relation="relation"
+      :startX="relation.startX"
+      :startY="relation.startY"
+      :endX="relation.endX"
+      :endY="relation.endY"
+    />
     <node
       v-for="(node, index) in pair.nodes"
       v-if="!index%2"
@@ -23,14 +30,25 @@
 
 <script type="text/javascript">
   import node from "~/components/node"
+  import relation from "~/components/relation"
   export default {
     props: ['pair', 'index', 'layout'],
     components: {
-      node
+      node,
+      relation
     },
     computed: {
       nodes: function() {
         return this.pair.nodes
+      },
+      relation: function() {
+        const Y = this.layout.gutter + this.layout.r + this.index * (2 * this.layout.r + this.layout.gutter);
+        return {
+          startX: this.layout.gutter + 2 * this.layout.r,
+          startY: Y,
+          endX: 2 * this.layout.gutter + 2 * this.layout.r,
+          endY: Y
+        }
       },
       left: function() {
         return {

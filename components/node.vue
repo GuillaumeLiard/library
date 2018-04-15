@@ -30,7 +30,7 @@
 <style media="screen">
   circle {
     fill: white;
-    stroke: hsl(240, 20%, 30%);;
+    stroke: hsl(240, 20%, 30%);
   }
 
   .text {
