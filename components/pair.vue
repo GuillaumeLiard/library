@@ -10,11 +10,12 @@
       :key="node.id"
     />
     <relation
-      :relation="relation"
       :startX="relation.startX"
       :startY="relation.startY"
       :endX="relation.endX"
       :endY="relation.endY"
+      :startArrow="false"
+      :endArrow="true"
     />
     <node
       v-for="(node, index) in pair.nodes"
