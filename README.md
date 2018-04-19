@@ -2,6 +2,8 @@
 
 > Nuxt.js project
 
+WIP Nuxt example implementation with svg (localhost:3000/library)
+
 ## Build Setup
 
 ``` bash
