@@ -9,16 +9,16 @@
     <p>
       Also new
     </p>
-    </section>
-  </template>
+  </section>
+</template>
 
-  <script>
-  import isomorphism from '~/components/Isomorphism';
-  export default {
-  }
-  </script>
+<script>
+import isomorphism from '~/components/Isomorphism';
+export default {
+}
+</script>
 
-  <style lang="css">
+<style lang="css">
   .container {
     display: flex;
     flex-direction: column;
@@ -39,4 +39,4 @@
   }
 
 
-  </style>
+</style>

@@ -3,20 +3,20 @@
     <h1>
       Bibliothèque
     </h1>
-    <isomorphism/>
-    </section>
-  </template>
+    <isomorphism />
+  </section>
+</template>
 
-  <script>
-  import isomorphism from '~/components/Isomorphism';
-  export default {
-    components: {
-      isomorphism
-    },
+<script>
+import isomorphism from '~/components/Isomorphism'
+export default {
+  components: {
+    isomorphism
   }
-  </script>
+}
+</script>
 
-  <style>
+<style>
   .container {
     display: flex;
     flex-direction: column;
@@ -37,4 +37,4 @@
   }
 
 
-  </style>
+</style>
