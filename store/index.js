@@ -64,6 +64,13 @@ const createStore = () => {
     mutations: {
       increment (state) {
         state.counter++
+      },
+      add(state) {
+        state.topologies[0].example.links.push({
+          id: 3,
+          sid: 3,
+          tid: 6
+        })
       }
     }
   })

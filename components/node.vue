@@ -1,5 +1,5 @@
 <template>
-  <g class="node">
+  <g v-on:click="add" class="node">
     <circle
       :cx="cx"
       :cy="cy"
@@ -22,6 +22,11 @@
           x: this.cx,
           y: this.cy + 4
         }
+      }
+    },
+    methods: {
+      add() {
+        this.$store.commit('add')
       }
     }
   }

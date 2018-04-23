@@ -1,22 +1,24 @@
 <template>
   <section class="container">
     <h1>
-      Bibliothèque
+      Abc
     </h1>
-    <isomorphism/>
+    <p>
+      New thing to say
+    </p>
+    <p>
+      Also new
+    </p>
     </section>
   </template>
 
   <script>
   import isomorphism from '~/components/Isomorphism';
   export default {
-    components: {
-      isomorphism
-    },
   }
   </script>
 
-  <style>
+  <style lang="css">
   .container {
     display: flex;
     flex-direction: column;

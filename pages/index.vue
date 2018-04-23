@@ -9,6 +9,7 @@
         Première partie.
       </div>
       <Tree/>
+      <nuxt-link to="/library">Library</nuxt-link>
     </div>
   </section>
 </template>
@@ -23,7 +24,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .container {
   min-height: 100vh;
   display: flex;
@@ -51,6 +52,6 @@ export default {
 .main {
   width: 100%;
   height: 100%;
-  background-color: green;
+  background-color: hsl(240, 20%, 70%);;
 }
 </style>
